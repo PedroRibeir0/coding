@@ -1,6 +1,4 @@
 import MainButton from "../../components/MainButton";
-import CodeEditor from "../../css/index/CodeEditor";
-
 
 export default function Improve() {
   return (
@@ -12,7 +10,6 @@ export default function Improve() {
             Create, launch, and iterate on new marketing campaigns without distracting your product team.
             </p>
             <MainButton text={'get ready'}/>
-            <CodeEditor/>
         </div>
         <div className='second-frame'>
             

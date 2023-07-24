@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.logo {
+  position: fixed;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.logo .logo-icon {
+  background-color: #010101;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  z-index: 2;
+}
+.logo .logo-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+  animation: nameAnimation 0.4s ease;
+}
+
+.logo.size-1 .logo-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+}
+.logo.size-1 .logo-name {
+  font-size: 20px;
+}
+
+.logo.size-2 {
+  gap: 20px;
+}
+.logo.size-2 .logo-icon {
+  width: 32px;
+  height: 32px;
+  font-size: 29px;
+}
+.logo.size-2 .logo-name {
+  text-transform: capitalize;
+  font-size: 34px;
+}
+
+.logo.color-1 .logo-icon {
+  background-color: #010101;
+  color: #ffffff;
+}
+.logo.color-1 .logo-name {
+  color: #010101;
+}
+
+.logo.color-2 .logo-icon {
+  background-color: #DDF247;
+  color: #010101;
+}
+.logo.color-2 .logo-name {
+  color: #ffffff;
+}
+
+@keyframes nameAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+}
+header {
+  width: 100%;
+  padding: 0 15px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+header .menu-icon {
+  width: 22px;
+  height: 22px;
+  align-self: flex-end;
+  position: fixed;
+  right: 15px;
+  top: 22px;
+}
+header .menu {
+  position: fixed;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 50px 15px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  height: 100vh;
+  animation: menuShowUp 0.4s;
+}
+header .menu .menu-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  gap: 35px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+}
+header .menu .menu-container .menu-opt:hover {
+  color: #818181;
+}
+
+@keyframes menuShowUp {
+  0% {
+    transform: translateX(100%);
+  }
+}
+.improve {
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4F4F4;
+}
+.improve .first-frame {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+}
+.improve .first-frame h1 {
+  font-size: 34px;
+  font-weight: 500;
+  color: #010101;
+  font-family: "Source Code Pro", monospace;
+}
+.improve .first-frame .code-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #010101;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: "Source Code Pro", monospace;
+}
+.improve .first-frame p {
+  margin-top: -10px;
+  width: 90%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #010101;
+  font-family: "Source Code Pro", monospace;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main-button {
+  border: none;
+  outline: none;
+  background-color: #010101;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 20px;
+  border-radius: 2px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}/*# sourceMappingURL=index.css.map */

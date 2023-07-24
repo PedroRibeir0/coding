@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+$inter: 'Inter', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$code: 'Source Code Pro', monospace;
+
+$yellow: #DDF247;
+$gray: #F4F4F4;
+$black: #010101;
+$white: #ffffff;
+
+@mixin font($size, $weight, $color, $family){
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  font-family: $family
+}
+
+@import 'logo', 'header', 'improve', 'code-editor';
+
+  
+button{
+  cursor: pointer;
+}
+
+.main-button{
+  border: none;
+  outline: none;
+  background-color: $black;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 20px;
+  border-radius: 2px;
+  @include font(17px, 500, $white, $montserrat)
+}
+
+  
+  
+  
+  
+  
+  
+  
+  

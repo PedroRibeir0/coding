@@ -1,0 +1,72 @@
+.logo{
+    position: fixed;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: max-content;
+
+    .logo-icon{
+        background-color: $black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include font(20px, 400, $white, $montserrat);
+        z-index: 2;
+    }
+    
+    .logo-name{
+        @include font(20px, 700, $black, $montserrat);
+        animation: nameAnimation .4s ease;
+    }
+}
+
+.logo.size-1{
+    .logo-icon{
+        width: 24px;
+        height: 24px;
+        font-size: 20px;
+    }
+    .logo-name{
+        font-size: 20px;
+    }
+}
+.logo.size-2{
+    gap: 20px;
+    .logo-icon{
+        width: 32px;
+        height: 32px;
+        font-size: 29px;
+    }
+    .logo-name{
+        text-transform: capitalize;
+        font-size: 34px;
+    }
+}
+.logo.color-1{
+    .logo-icon{
+        background-color: $black;
+        color: $white;
+    }
+    .logo-name{
+        color: $black;
+    }
+}
+
+.logo.color-2{
+    .logo-icon{
+        background-color: $yellow;
+        color: $black;
+    }
+    .logo-name{
+        color: $white;
+    }
+}
+
+@keyframes nameAnimation {
+    0%{
+        transform: translateX(-100%);
+    }
+}

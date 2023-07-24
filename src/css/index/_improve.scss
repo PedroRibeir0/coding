@@ -1,0 +1,42 @@
+.improve{
+    
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $gray;
+
+
+    .first-frame{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 25px;
+
+        h1{
+            @include font(34px, 500, $black, $code);
+        }
+
+        .code-icon{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            @include font(12px, 400, $white, $code);
+        }
+        
+        p{
+            margin-top: -10px;
+            width: 90%;
+            margin-bottom: 20px;
+            @include font(16px, 400, $black, $code);
+        }
+    }
+}

@@ -9,11 +9,15 @@
     -webkit-text-size-adjust: 100%;
 }
 
+button{
+  cursor: pointer;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 $inter: 'Inter', sans-serif;
 $montserrat: 'Montserrat', sans-serif;
@@ -23,6 +27,7 @@ $yellow: #DDF247;
 $gray: #F4F4F4;
 $black: #010101;
 $white: #ffffff;
+$red: #FF4F4F;
 
 @mixin font($size, $weight, $color, $family){
   font-size: $size;
@@ -31,11 +36,20 @@ $white: #ffffff;
   font-family: $family
 }
 
-@import 'logo', 'header', 'improve';
+@import 'logo', 'header', 'improve', 'features';
 
-  
-button{
-  cursor: pointer;
+.brands{
+  background-color: $white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6%;
+  padding: 60px 0;
+
+  .brand-logo{
+    width: 25%;
+  }
 }
 
 .main-button{
@@ -49,7 +63,15 @@ button{
   gap: 10px;
   padding: 5px 20px;
   border-radius: 2px;
-  @include font(17px, 500, $white, $montserrat)
+  @include font(17px, 500, $white, $montserrat);
+
+  &:hover{
+    background-color: lighten($color: $black, $amount: 12);
+  }
+
+  &:active{
+    transform: scale(0.985);
+  }
 }
 
   

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -12,9 +12,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
 .logo {
-  position: fixed;
-  top: 15px;
+  position: static;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,22 +90,26 @@
 }
 header {
   width: 100%;
+  height: 70px;
   padding: 0 15px;
   position: fixed;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  background-color: #F4F4F4;
+  z-index: 10;
+  transition: box-shadow 0.3s;
 }
 header .menu-icon {
+  position: static;
+  cursor: pointer;
   width: 22px;
   height: 22px;
-  align-self: flex-end;
-  position: fixed;
-  right: 15px;
-  top: 22px;
 }
-header .menu {
+
+.menu {
   position: fixed;
+  z-index: 12;
   right: 0;
   background-color: #ffffff;
   box-shadow: 0 0 50px 15px rgba(0, 0, 0, 0.2);
@@ -110,7 +117,8 @@ header .menu {
   height: 100vh;
   animation: menuShowUp 0.4s;
 }
-header .menu .menu-container {
+.menu .menu-container {
+  z-index: 12;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -124,8 +132,12 @@ header .menu .menu-container {
   color: #010101;
   font-family: "Montserrat", sans-serif;
 }
-header .menu .menu-container .menu-opt:hover {
+.menu .menu-container .menu-opt:hover {
   color: #818181;
+}
+
+header.shadow {
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.125);
 }
 
 @keyframes menuShowUp {
@@ -144,6 +156,7 @@ header .menu .menu-container .menu-opt:hover {
 }
 .improve .first-frame {
   padding: 20px;
+  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -178,9 +191,180 @@ header .menu .menu-container .menu-opt:hover {
   color: #010101;
   font-family: "Source Code Pro", monospace;
 }
+.improve .second-frame {
+  padding-top: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  background: url("/images/bg-yellow-line.svg");
+  background-repeat: no-repeat;
+  background-color: #010101;
+  background-position: 0 80px;
+  background-size: 100%;
+}
+.improve .second-frame .code-editor {
+  position: absolute;
+  width: 355px;
+  left: -15px;
+  z-index: 0;
+}
+.improve .second-frame .italo-photo {
+  position: relative;
+  width: 273px;
+  z-index: 2;
+}
+.improve .second-frame .name-skill {
+  position: absolute;
+  background-color: rgba(1, 1, 1, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  padding: 12px 50px 12px 34px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+.improve .second-frame .name-skill .out-ball {
+  padding: 1px;
+  border: 1px solid #FF4F4F;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+}
+.improve .second-frame .name-skill .out-ball .in-ball {
+  width: 100%;
+  height: 100%;
+  background-color: #FF4F4F;
+  border-radius: 50%;
+}
+.improve .second-frame .park-caution-icon {
+  width: 120px;
+  position: absolute;
+  right: 25px;
+  bottom: -53px;
+  z-index: 3;
+}
 
-button {
-  cursor: pointer;
+.features {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #F4F4F4;
+  padding-bottom: 50px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.features .feature-text-area {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.features .feature-text-area h2 {
+  font-size: 34px;
+  font-weight: 500;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+}
+.features .feature-text-area p {
+  width: 60%;
+  font-size: 16px;
+  font-weight: 200;
+  color: #010101;
+  font-family: "Inter", sans-serif;
+}
+.features .features-carrousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.features .features-carrousel .carrousel-container {
+  cursor: grab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+.features .features-carrousel .carrousel-container .feature-card {
+  background-color: #ffffff;
+  width: 317px;
+  height: 343px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 22px;
+}
+.features .features-carrousel .carrousel-container .feature-card:nth-child(2) {
+  background-color: #DDF247;
+}
+.features .features-carrousel .carrousel-container .feature-card .feature-icon {
+  width: 83px;
+  height: 83px;
+  padding: 21px;
+  background-color: white;
+  border-radius: 10px;
+}
+.features .features-carrousel .carrousel-container .feature-card .card-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.features .features-carrousel .carrousel-container .feature-card .card-txt h3 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+}
+.features .features-carrousel .carrousel-container .feature-card .card-txt p {
+  width: 60%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #010101;
+  font-family: "Inter", sans-serif;
+}
+.features .carrousel-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.features .carrousel-bar .bars-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.features .carrousel-bar .bars-list .bar {
+  width: 51px;
+  height: 11px;
+  background-color: #cecece;
+}
+.features .carrousel-bar .bars-list .bar.current {
+  width: 82px;
+  background-color: #DDF247;
+}
+
+.brands {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6%;
+  padding: 60px 0;
+}
+.brands .brand-logo {
+  width: 25%;
 }
 
 .main-button {
@@ -198,4 +382,10 @@ button {
   font-weight: 500;
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
+}
+.main-button:hover {
+  background-color: #202020;
+}
+.main-button:active {
+  transform: scale(0.985);
 }/*# sourceMappingURL=index.css.map */

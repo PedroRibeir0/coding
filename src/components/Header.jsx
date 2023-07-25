@@ -4,7 +4,20 @@ import { useState, useEffect } from "react";
 export default function Header() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
 
+
+  useEffect(() => {
+    function handleScroll(){
+      setScrolled(window.scrollY > 0);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -34,20 +47,21 @@ export default function Header() {
   }
   
   return (
-    <header>
+    <>
+    <header className={`${scrolled ? 'shadow' : ''}`}>
         <Logo 
           hasName
           color={1}
           size={1}
         />
-        {isMenuOpen ? 
-        <Menu/> : 
         <img 
           src="/images/menu-icon.svg" 
           alt="menu-icon"
           className="menu-icon"
           onClick={()=> setIsMenuOpen(true)}
-        />}
+        />
     </header>
+    {isMenuOpen && <Menu/>}
+    </>
   )
 }

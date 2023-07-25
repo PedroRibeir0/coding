@@ -7,10 +7,11 @@
     justify-content: center;
     align-items: center;
     background-color: $gray;
-
+    // margin-bottom: 500px;
 
     .first-frame{
         padding: 20px;
+        padding-bottom: 80px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -37,6 +38,69 @@
             width: 90%;
             margin-bottom: 20px;
             @include font(16px, 400, $black, $code);
+        }
+    }
+
+    .second-frame{
+        padding-top: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        background: url('/images/bg-yellow-line.svg');
+        background-repeat: no-repeat;
+        background-color: $black;
+        background-position: 0 80px ;
+        background-size: 100%;
+
+        .code-editor{
+            position: absolute;
+            width: 355px;
+            left: -15px;
+            z-index: 0;
+        }
+
+        .italo-photo{
+            position: relative;
+            width: 273px;
+            z-index: 2;
+        }
+        
+        .name-skill{
+            position: absolute;
+            background-color: rgba(1, 1, 1, 0.50);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            left: 0;
+            bottom: 0;
+            z-index: 3;
+            padding: 12px 50px 12px 34px;
+            @include font(12px, 300, $white, $montserrat);
+
+            .out-ball{
+                padding: 1px;
+                border: 1px solid $red;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+
+                .in-ball{
+                    width: 100%;
+                    height: 100%;
+                    background-color: $red;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .park-caution-icon{
+            width: 120px;
+            position: absolute;
+            right: 25px;
+            bottom: -53px;
+            z-index: 3;
         }
     }
 }

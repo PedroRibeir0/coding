@@ -36,7 +36,7 @@ $red: #FF4F4F;
   font-family: $family
 }
 
-@import 'logo', 'header', 'improve', 'features', 'web-pages', 'get-up';
+@import 'logo', 'header', 'improve', 'features', 'web-pages', 'get-up', 'packages';
 
 .brands{
   background-color: $white;
@@ -72,6 +72,25 @@ $red: #FF4F4F;
   &:active{
     transform: scale(0.985);
   }
+}
+
+.buy-button{
+  width: 100%;
+  text-transform: capitalize;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 10px 0px;
+  @include font(19px, 500, $yellow, $montserrat)
+}
+
+.buy-button.color-1{
+  background-color: $white;
+}
+
+.buy-button.color-2{
+  background-color: $yellow;
+  color: $black;
 }
 
   

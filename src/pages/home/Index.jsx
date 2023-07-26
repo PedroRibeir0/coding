@@ -3,6 +3,7 @@ import Header from '../../components/Header'
 import Features from './Features'
 import GetUp from './GetUp'
 import Improve from './Improve'
+import Packages from './Packages'
 import WebPages from './WebPages'
 
 
@@ -19,6 +20,7 @@ export default function Index() {
         <Features/>
         <WebPages/>
         <GetUp/>
+        <Packages/>
     </div>
   )
 }

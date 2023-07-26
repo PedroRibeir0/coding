@@ -504,6 +504,48 @@ header.shadow {
   right: 0;
 }
 
+.packages {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.packages h3 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.packages p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #010101;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  width: 80%;
+}
+.packages .packages-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+.packages .packages-list .package-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4F4F4;
+}
+.packages .packages-list .package-container:nth-child(2) {
+  background-color: #010101;
+}
+
 .brands {
   background-color: #ffffff;
   width: 100%;
@@ -538,4 +580,26 @@ header.shadow {
 }
 .main-button:active {
   transform: scale(0.985);
+}
+
+.buy-button {
+  width: 100%;
+  text-transform: capitalize;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 10px 0px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #DDF247;
+  font-family: "Montserrat", sans-serif;
+}
+
+.buy-button.color-1 {
+  background-color: #ffffff;
+}
+
+.buy-button.color-2 {
+  background-color: #DDF247;
+  color: #010101;
 }/*# sourceMappingURL=index.css.map */

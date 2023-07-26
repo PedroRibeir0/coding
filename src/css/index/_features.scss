@@ -3,7 +3,7 @@
     overflow-x: hidden;
     background-color: $gray;
     padding-bottom: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -25,8 +25,6 @@
         }
     }  
 
-
-
     .features-carrousel{
         display: flex;
         justify-content: center;
@@ -39,6 +37,7 @@
             align-items: center;
             gap: 10px;
             list-style: none;
+            touch-action: none;
 
             .feature-card{
                 background-color: $white;
@@ -80,6 +79,7 @@
         }
     }
     .carrousel-bar{
+        margin-top: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -90,12 +90,14 @@
             align-items: center;
             justify-content: center;
             gap: 15px;
+            transition: all 1s;
 
             .bar{
                 width: 51px;
                 height: 11px;
                 background-color: darken($color: $gray, $amount: 15);
             }
+
             .bar.current{
                 width: 82px;
                 background-color: $yellow;

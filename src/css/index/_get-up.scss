@@ -1,0 +1,101 @@
+.get-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    margin-bottom: 150px;
+    
+
+    .texts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        
+        h3{
+            text-align: center;
+            @include font(34px, 500, $black, $montserrat);
+            
+        }
+
+        .showcase-university{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+
+            li{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                text-align: center;
+                padding-bottom: 40px;
+                gap: 20px;
+
+                h4{
+                    @include font(34px, 700, $black, $montserrat);
+                }
+                
+                p{
+                    @include font(16px, 400, $black, $inter);
+
+                }
+            }
+
+            .university{
+                border-bottom: 1px solid darken($color: $gray, $amount: 12);
+            }
+        }
+    }
+
+    .card-container{
+        background-color: $black;
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        height: 322px;
+        
+
+        .card{
+            position: relative;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            background-color: $yellow;
+            width: 100%;
+            padding-left: 20px;
+            padding-top: 20px;
+            height: 377px;
+            overflow: hidden;
+            gap: 20px;
+
+            .tutor{
+                @include font(23px, 700, $black, $montserrat);
+                opacity: 0.3;
+                text-transform: uppercase;
+            }
+
+            .tutor-name{
+                @include font(32px, 700, $black, $montserrat);
+                opacity: 0.3;
+                text-transform: capitalize;
+                width: 50%;
+            }
+
+            img{
+                width: 250px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+        }
+    }
+}

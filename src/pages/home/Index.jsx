@@ -1,7 +1,9 @@
 'use client'
 import Header from '../../components/Header'
 import Features from './Features'
+import GetUp from './GetUp'
 import Improve from './Improve'
+import WebPages from './WebPages'
 
 
 export default function Index() {
@@ -15,6 +17,8 @@ export default function Index() {
           <img className="brand-logo" src="/images/coursera-logo.svg" alt="coursera-logo" />
         </section>
         <Features/>
+        <WebPages/>
+        <GetUp/>
     </div>
   )
 }

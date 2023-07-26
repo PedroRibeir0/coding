@@ -23,11 +23,22 @@ export default function Features() {
     ]
 
     const [current, setCurrent] = useState(1)
-    // const [width, setWidth] = useState(0)
+    const [width, setWidth] = useState(0)
     const carrousel = useRef()
+    const barChange = 70
 
-    function handleDragEnd(e){
-        console.log(e)
+    useEffect(()=>{
+        setWidth(carrousel.current.scrollWidth/ FeaturesList.length)
+    },[])
+
+
+    function handleDrag(e){
+        let move = Math.trunc(Number(carrousel.current.style.transform.slice(11,17)))
+        console.log(move)
+        if (move >= 280) setCurrent(0)
+        else if (move < 50 && move >= -20) setCurrent(1)
+        else if (move < -250) setCurrent(2)
+        
     }    
 
     return (
@@ -40,13 +51,14 @@ export default function Features() {
         </div>
         <motion.div className="features-carrousel">
             <motion.ul 
-            onDragEnd={handleDragEnd}
+            onDrag={handleDrag}
             className="carrousel-container" 
             whileTap={{cursor: 'grabbing'}}
             drag="x"
-            dragConstraints={{right: 300, left: -300}}
+            dragConstraints={{right: width, left: -width}}
+            dragElastic={0}
+            dragMomentum={false}
             ref={carrousel}>
-
                 {FeaturesList.map((item, index)=>{
                     return(
                         <motion.li className="feature-card" key={index}>

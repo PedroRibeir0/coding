@@ -33,6 +33,7 @@ export default function Packages() {
         },
     ]
 
+
     return (
     <section className="packages">
         <h3>Choose your package</h3>
@@ -43,6 +44,7 @@ export default function Packages() {
             {packagesInfo.map((item, index)=>{
                 return(
                     <li key={index} className="package-container">
+                        {index == 1 && <img src="/images/new.svg" alt="" className="new" />}
                         <span className="package-name">{item.name}</span>
                         <span className="package-price">
                             <span className="dollar">$</span>
@@ -50,7 +52,7 @@ export default function Packages() {
                         </span>
                         <ul className="packages-benefits">
                             {item.benefits.map(benefit=>{
-                                return <li className="benefit">{benefit}</li>
+                                return <li key={benefit} className="benefit">{benefit}</li>
                             })}
                         </ul>
                         <BuyButton color={index == 1 ? 2 : 1}/>

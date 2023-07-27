@@ -508,7 +508,7 @@ header.shadow {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
   justify-content: center;
 }
@@ -527,7 +527,13 @@ header.shadow {
   text-align: center;
   width: 80%;
 }
+.packages .new {
+  position: absolute;
+  left: 40px;
+  top: 120px;
+}
 .packages .packages-list {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -536,16 +542,135 @@ header.shadow {
   list-style: none;
 }
 .packages .packages-list .package-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #F4F4F4;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+  width: 343px;
+  padding: 50px;
+  gap: 30px;
+  border-radius: 10px;
 }
 .packages .packages-list .package-container:nth-child(2) {
   background-color: #010101;
+  color: #ffffff;
+}
+.packages .packages-list .package-container .package-name {
+  font-size: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.packages .packages-list .package-container .package-price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.packages .packages-list .package-container .package-price .dollar {
+  font-size: 18px;
+}
+.packages .packages-list .package-container .package-price .price {
+  font-size: 42px;
+  font-weight: 700;
+}
+.packages .packages-list .package-container .packages-benefits {
+  height: 125px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
+.faq {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.faq h3 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+}
+.faq .faq-list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #ffffff;
+}
+.faq .faq-list .faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  border-bottom: 1px solid #dbdbdb;
+  font-size: 21px;
+  font-weight: 500;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+}
+.faq .faq-list .faq-item:last-child {
+  border: none;
+}
+.faq .faq-list .faq-item .question-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  background-color: white;
+}
+.faq .faq-list .faq-item .question-button .question {
+  flex-basis: 80%;
+}
+.faq .faq-list .faq-item .question-button .faq-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #DDF247;
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: #010101;
+  font-family: "Montserrat", sans-serif;
+}
+.faq .faq-list .faq-item .answer {
+  font-size: 19px;
+  font-weight: 400;
+  display: none;
+  animation: faqDown 0.2s;
+  z-index: 0;
+}
+.faq .faq-list .faq-item.open .faq-button {
+  background-color: #ffffff;
+  color: #010101;
+  border: 1px solid #010101;
+}
+.faq .faq-list .faq-item.open .answer {
+  display: block;
+}
+
+@keyframes faqDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-64px);
+  }
+  30% {
+    opacity: 0;
+  }
+}
 .brands {
   background-color: #ffffff;
   width: 100%;
@@ -588,18 +713,28 @@ header.shadow {
   border-radius: 10px;
   outline: none;
   border: none;
-  padding: 10px 0px;
+  padding: 8px 0px;
   font-size: 19px;
   font-weight: 500;
   color: #DDF247;
   font-family: "Montserrat", sans-serif;
+  transition: all 0.2s;
+}
+.buy-button:active {
+  transform: scale(0.985);
 }
 
 .buy-button.color-1 {
   background-color: #ffffff;
 }
+.buy-button.color-1:hover {
+  background-color: #010101;
+}
 
 .buy-button.color-2 {
   background-color: #DDF247;
   color: #010101;
+}
+.buy-button.color-2:hover {
+  background-color: #ffffff;
 }/*# sourceMappingURL=index.css.map */

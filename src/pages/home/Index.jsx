@@ -1,5 +1,6 @@
 'use client'
 import Header from '../../components/Header'
+import FAQ from './FAQ'
 import Features from './Features'
 import GetUp from './GetUp'
 import Improve from './Improve'
@@ -21,6 +22,7 @@ export default function Index() {
         <WebPages/>
         <GetUp/>
         <Packages/>
+        <FAQ/>
     </div>
   )
 }

@@ -1,0 +1,90 @@
+.faq{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    h3{
+        @include font(34px, 700, $black, $montserrat);
+    }
+
+    .faq-list{
+        display: flex;
+        flex-direction: column;
+        // gap: 40px;
+        padding: 20px;
+        background-color: $white;
+
+        .faq-item{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 40px;
+            padding-top: 40px;
+            border-bottom: 1px solid darken($color: $gray, $amount: 10);
+            @include font(21px, 500, $black, $montserrat);
+
+            &:last-child{
+                border: none;
+            }
+
+            .question-button{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 2;
+                background-color: white;
+                
+                .question{
+                    flex-basis: 80%;
+                }
+
+                .faq-button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    background-color: $yellow;
+                    border: none;
+                    @include font(24px, 500, $black, $montserrat);
+                }
+            }
+
+           .answer{
+            font-size: 19px;
+            font-weight: 400;
+            display: none;
+            animation: faqDown .2s;
+            z-index: 0;
+           } 
+        }
+
+        .faq-item.open{
+            .faq-button{
+                background-color: $white;
+                color: $black;
+                
+                border: 1px solid $black;
+            }
+
+            .answer{
+                display: block;
+            }
+        }
+    }
+}
+
+@keyframes faqDown {
+    0%{
+        opacity: 0;
+        transform: translateY(-64px);
+    }
+    30%{
+        opacity: 0;
+    }
+}

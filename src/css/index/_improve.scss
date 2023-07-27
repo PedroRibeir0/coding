@@ -7,7 +7,6 @@
     justify-content: center;
     align-items: center;
     background-color: $gray;
-    // margin-bottom: 500px;
 
     .first-frame{
         padding: 20px;
@@ -20,6 +19,10 @@
 
         h1{
             @include font(34px, 500, $black, $code);
+
+            @media screen and (min-width: 768px){
+                width: 85%;
+            }
         }
 
         .code-icon{
@@ -38,6 +41,10 @@
             width: 90%;
             margin-bottom: 20px;
             @include font(16px, 400, $black, $code);
+
+            @media screen and (min-width: 768px){
+                width: 60%;
+            }
         }
     }
 
@@ -59,12 +66,21 @@
             width: 355px;
             left: -15px;
             z-index: 0;
+            @media screen and (min-width: 768px){
+                width: 600px;
+                top: 80px;
+            }
         }
 
         .italo-photo{
             position: relative;
             width: 273px;
+            left: 40px;
             z-index: 2;
+            @media screen and (min-width: 768px){
+                width: 320px;
+                
+            }
         }
         
         .name-skill{
@@ -101,6 +117,11 @@
             right: 25px;
             bottom: -53px;
             z-index: 3;
+
+            @media screen and (min-width: 768px){
+                width: 200px;
+                bottom: -90px;
+            }
         }
     }
 }

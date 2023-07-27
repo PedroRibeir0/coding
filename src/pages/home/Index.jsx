@@ -1,5 +1,7 @@
 'use client'
+import Footer from '../../components/Footer'
 import Header from '../../components/Header'
+import MainButton from '../../components/MainButton'
 import FAQ from './FAQ'
 import Features from './Features'
 import GetUp from './GetUp'
@@ -14,15 +16,26 @@ export default function Index() {
         <Header/>
         <Improve/>
         <section className='brands'>
-          <img className="brand-logo" src="/images/edx-logo.svg" alt="edx-logo" />
-          <img className="brand-logo" src="/images/udemy-logo.svg" alt="udemy-logo" />
-          <img className="brand-logo" src="/images/coursera-logo.svg" alt="coursera-logo" />
+          {['edx', 'udemy', 'coursera'].map(item=>{
+            return <img className="brand-logo" src={`/images/${item}-logo.svg`} alt={`${item}-logo`} />
+          })}
         </section>
         <Features/>
         <WebPages/>
         <GetUp/>
         <Packages/>
         <FAQ/>
+        <div className='start-container'>
+          <div className='start'>
+            <h3>Start upgrading your skills free for this month</h3>
+            <p>Build your site for free and take as long as you need</p>
+            <div className="buttons">
+              <button className='try-yourself-button'>try yourself</button>
+              <MainButton text={'get started'} width={'100%'} height={'40px'}/>
+            </div>
+          </div>
+        </div>
+        <Footer/>
     </div>
   )
 }

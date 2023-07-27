@@ -6,13 +6,18 @@
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
+    @media screen and (min-width: 768px){
+        padding-top: 30px;
+    }
 
     .feature-text-area{
         width: 100%;
         padding: 20px;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 20px;
 
         h2{
@@ -21,6 +26,7 @@
         
         p{
             width: 60%;
+            text-align: center;
             @include font(16px, 200, $black, $inter);
         }
     }  
@@ -29,6 +35,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+        max-width: 450px;
 
         .carrousel-container{
             cursor: grab;
@@ -41,7 +49,7 @@
 
             .feature-card{
                 background-color: $white;
-                width: 317px;
+                min-width: 317px;
                 height: 343px;
                 border-radius: 15px;
                 display: flex;

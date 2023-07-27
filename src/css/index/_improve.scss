@@ -7,6 +7,13 @@
     justify-content: center;
     align-items: center;
     background-color: $gray;
+    
+    @media screen and (min-width: 1024px){
+     flex-direction: row;   
+     padding: 0;
+     height: 750px;
+    }
+
 
     .first-frame{
         padding: 20px;
@@ -17,11 +24,18 @@
         align-items: flex-start;
         gap: 25px;
 
+        @media screen and (min-width: 1024px){
+            width: 50%;
+        }
+
         h1{
             @include font(34px, 500, $black, $code);
 
             @media screen and (min-width: 768px){
-                width: 85%;
+                width: 90%;
+            }
+            @media screen and (min-width: 1024px){
+                font-size: 52px;
             }
         }
 
@@ -34,6 +48,11 @@
             height: 30px;
             border-radius: 50%;
             @include font(12px, 400, $white, $code);
+
+            @media screen and (min-width: 1024px){
+                width: 40px;
+                height: 40px;
+            }
         }
         
         p{
@@ -44,6 +63,18 @@
 
             @media screen and (min-width: 768px){
                 width: 60%;
+            }
+
+            @media screen and (min-width: 1024px){
+                width: 65%;
+            }
+        }
+
+        .main-button.improve-button{
+            height: 50px;
+            @media screen and (min-width: 1024px){
+                height: 65px;
+                width: 220px;
             }
         }
     }
@@ -61,6 +92,12 @@
         background-position: 0 80px ;
         background-size: 100%;
 
+        @media screen and (min-width: 1024px){
+            width: 50%;
+            height: 100%;
+            background-position: 0 90%;
+        }
+
         .code-editor{
             position: absolute;
             width: 355px;
@@ -69,6 +106,12 @@
             @media screen and (min-width: 768px){
                 width: 600px;
                 top: 80px;
+            }
+
+            @media screen and (min-width: 1024px){
+                width: 590px;
+                left: -25%;
+                top: 270px;
             }
         }
 
@@ -79,7 +122,13 @@
             z-index: 2;
             @media screen and (min-width: 768px){
                 width: 320px;
-                
+            }
+
+            @media screen and (min-width: 1024px){
+                width: 400px;
+                position: absolute;
+                bottom: 0;
+                left: 20%;
             }
         }
         
@@ -95,12 +144,21 @@
             padding: 12px 50px 12px 34px;
             @include font(12px, 300, $white, $montserrat);
 
+            @media screen and (min-width: 1024px){
+                font-size: 15px;
+                gap: 8px;
+            }
+
             .out-ball{
                 padding: 1px;
                 border: 1px solid $red;
                 width: 17px;
                 height: 17px;
                 border-radius: 50%;
+                @media screen and (min-width: 1024px){
+                    width: 20px;
+                    height: 20px;
+                }
 
                 .in-ball{
                     width: 100%;
@@ -121,6 +179,11 @@
             @media screen and (min-width: 768px){
                 width: 200px;
                 bottom: -90px;
+            }
+
+            @media screen and (min-width: 1024px){
+                width: 230px;
+                bottom: -102px;
             }
         }
     }

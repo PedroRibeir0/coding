@@ -12,6 +12,11 @@
         padding-top: 30px;
     }
 
+    @media screen and (min-width: 1024px){
+        flex-direction: row;  
+        justify-content: space-around;      
+    }
+
     .feature-text-area{
         width: 100%;
         padding: 20px;
@@ -20,8 +25,13 @@
         align-items: center;
         gap: 20px;
 
+        @media screen and (min-width: 1024px){
+            width: 50%;
+        }
+
         h2{
             @include font(34px, 500, $black, $montserrat);
+            text-align: center;
         }
         
         p{
@@ -36,7 +46,10 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        max-width: 450px;
+        max-width: 370px;
+        @media screen and (min-width: 1024px){
+         width: 50%;       
+        }
 
         .carrousel-container{
             cursor: grab;
@@ -91,6 +104,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (min-width: 1024px){
+            position: absolute;       
+        }
 
         .bars-list{
             display: flex;

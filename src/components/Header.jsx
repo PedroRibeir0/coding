@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function Header() {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(true)
   const [scrolled, setScrolled] = useState(false);
 
 

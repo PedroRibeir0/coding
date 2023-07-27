@@ -1,7 +1,7 @@
 
-export default function MainButton({text, width, height}) {
+export default function MainButton({text, className}) {
   return (
-    <button className="main-button" style={{width: width, height: height}}>
+    <button className={`main-button ${className}`}>
         <span>{text}</span>
         <img src="/images/arrow-up-right.svg" alt="" />
     </button>

@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="layer-2">
             <ul className="social-links">
                 {['facebook', 'instagram', 'linkedin', 'twitter', 'email'].map(item=>{
-                    return <img src={`/images/${item}-logo.svg`} alt="" />
+                    return <img key={item} src={`/images/${item}-logo.svg`} alt="" />
                 })}
             </ul>
             <span className="macode-copyright">&copy; 2023 Copyright <span className="macode">Macode.io</span></span>

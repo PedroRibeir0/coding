@@ -10,11 +10,20 @@ header{
     z-index: 10;
     transition: box-shadow .3s;
 
+    @media screen and (min-width: 1024px){
+     position: absolute;   
+     background-color: transparent;
+     width: 50%;
+    }
+
     .menu-icon{
         position: static;
         cursor: pointer;
         width: 22px;
         height: 22px;
+        @media screen and (min-width: 1024px){
+            display: none;
+        }
     }
 }
 
@@ -28,6 +37,15 @@ header{
     height: 100vh;
     animation: menuShowUp .4s;
 
+    @media screen and (min-width: 1024px){
+     position: absolute; 
+     background-color: transparent;
+     box-shadow: none;  
+     height: max-content;
+     top: 26px;
+     right: 30px;
+    }
+
     .menu-container{
         z-index: 12;
         width: 100%;
@@ -39,6 +57,14 @@ header{
         padding-top: 60px;
         gap: 35px;
         @include font(20px, 500, $black, $montserrat);
+        
+        @media screen and (min-width: 1024px){
+            flex-direction: row;
+            padding-top: 0;
+            font-size: 16px;
+            color: $white;
+            justify-content: flex-end;
+        }
         
         .menu-opt{
             &:hover{

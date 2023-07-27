@@ -100,11 +100,23 @@ header {
   z-index: 10;
   transition: box-shadow 0.3s;
 }
+@media screen and (min-width: 1024px) {
+  header {
+    position: absolute;
+    background-color: transparent;
+    width: 50%;
+  }
+}
 header .menu-icon {
   position: static;
   cursor: pointer;
   width: 22px;
   height: 22px;
+}
+@media screen and (min-width: 1024px) {
+  header .menu-icon {
+    display: none;
+  }
 }
 
 .menu {
@@ -116,6 +128,17 @@ header .menu-icon {
   width: 50%;
   height: 100vh;
   animation: menuShowUp 0.4s;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    position: absolute;
+    background-color: transparent;
+    box-shadow: none;
+    height: -moz-max-content;
+    height: max-content;
+    top: 26px;
+    right: 30px;
+  }
 }
 .menu .menu-container {
   z-index: 12;
@@ -131,6 +154,15 @@ header .menu-icon {
   font-weight: 500;
   color: #010101;
   font-family: "Montserrat", sans-serif;
+}
+@media screen and (min-width: 1024px) {
+  .menu .menu-container {
+    flex-direction: row;
+    padding-top: 0;
+    font-size: 16px;
+    color: #ffffff;
+    justify-content: flex-end;
+  }
 }
 .menu .menu-container .menu-opt:hover {
   color: #818181;
@@ -154,6 +186,13 @@ header.shadow {
   align-items: center;
   background-color: #F4F4F4;
 }
+@media screen and (min-width: 1024px) {
+  .improve {
+    flex-direction: row;
+    padding: 0;
+    height: 750px;
+  }
+}
 .improve .first-frame {
   padding: 20px;
   padding-bottom: 80px;
@@ -163,6 +202,11 @@ header.shadow {
   align-items: flex-start;
   gap: 25px;
 }
+@media screen and (min-width: 1024px) {
+  .improve .first-frame {
+    width: 50%;
+  }
+}
 .improve .first-frame h1 {
   font-size: 34px;
   font-weight: 500;
@@ -171,7 +215,12 @@ header.shadow {
 }
 @media screen and (min-width: 768px) {
   .improve .first-frame h1 {
-    width: 85%;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .improve .first-frame h1 {
+    font-size: 52px;
   }
 }
 .improve .first-frame .code-icon {
@@ -187,6 +236,12 @@ header.shadow {
   color: #ffffff;
   font-family: "Source Code Pro", monospace;
 }
+@media screen and (min-width: 1024px) {
+  .improve .first-frame .code-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
 .improve .first-frame p {
   margin-top: -10px;
   width: 90%;
@@ -199,6 +254,20 @@ header.shadow {
 @media screen and (min-width: 768px) {
   .improve .first-frame p {
     width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .improve .first-frame p {
+    width: 65%;
+  }
+}
+.improve .first-frame .main-button.improve-button {
+  height: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .improve .first-frame .main-button.improve-button {
+    height: 65px;
+    width: 220px;
   }
 }
 .improve .second-frame {
@@ -214,6 +283,13 @@ header.shadow {
   background-position: 0 80px;
   background-size: 100%;
 }
+@media screen and (min-width: 1024px) {
+  .improve .second-frame {
+    width: 50%;
+    height: 100%;
+    background-position: 0 90%;
+  }
+}
 .improve .second-frame .code-editor {
   position: absolute;
   width: 355px;
@@ -226,6 +302,13 @@ header.shadow {
     top: 80px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .improve .second-frame .code-editor {
+    width: 590px;
+    left: -25%;
+    top: 270px;
+  }
+}
 .improve .second-frame .italo-photo {
   position: relative;
   width: 273px;
@@ -235,6 +318,14 @@ header.shadow {
 @media screen and (min-width: 768px) {
   .improve .second-frame .italo-photo {
     width: 320px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .improve .second-frame .italo-photo {
+    width: 400px;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
   }
 }
 .improve .second-frame .name-skill {
@@ -252,12 +343,24 @@ header.shadow {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
 }
+@media screen and (min-width: 1024px) {
+  .improve .second-frame .name-skill {
+    font-size: 15px;
+    gap: 8px;
+  }
+}
 .improve .second-frame .name-skill .out-ball {
   padding: 1px;
   border: 1px solid #FF4F4F;
   width: 17px;
   height: 17px;
   border-radius: 50%;
+}
+@media screen and (min-width: 1024px) {
+  .improve .second-frame .name-skill .out-ball {
+    width: 20px;
+    height: 20px;
+  }
 }
 .improve .second-frame .name-skill .out-ball .in-ball {
   width: 100%;
@@ -278,6 +381,12 @@ header.shadow {
     bottom: -90px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .improve .second-frame .park-caution-icon {
+    width: 230px;
+    bottom: -102px;
+  }
+}
 
 .features {
   width: 100%;
@@ -295,6 +404,12 @@ header.shadow {
     padding-top: 30px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .features {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .features .feature-text-area {
   width: 100%;
   padding: 20px;
@@ -303,11 +418,17 @@ header.shadow {
   align-items: center;
   gap: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .features .feature-text-area {
+    width: 50%;
+  }
+}
 .features .feature-text-area h2 {
   font-size: 34px;
   font-weight: 500;
   color: #010101;
   font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 .features .feature-text-area p {
   width: 60%;
@@ -322,7 +443,12 @@ header.shadow {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  max-width: 450px;
+  max-width: 370px;
+}
+@media screen and (min-width: 1024px) {
+  .features .features-carrousel {
+    width: 50%;
+  }
 }
 .features .features-carrousel .carrousel-container {
   cursor: grab;
@@ -376,6 +502,11 @@ header.shadow {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .features .carrousel-bar {
+    position: absolute;
+  }
 }
 .features .carrousel-bar .bars-list {
   display: flex;
@@ -818,13 +949,13 @@ footer .layer-2 .macode-copyright .macode {
   background-color: #ffffff;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 6%;
   padding: 60px 0;
 }
 .brands .brand-logo {
   width: 25%;
+  max-width: 240px;
 }
 
 .start-container {

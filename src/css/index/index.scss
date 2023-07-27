@@ -42,13 +42,13 @@ $red: #FF4F4F;
   background-color: $white;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 6%;
   padding: 60px 0;
 
   .brand-logo{
     width: 25%;
+    max-width: 240px;
   }
 }
 .start-container{

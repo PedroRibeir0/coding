@@ -17,7 +17,7 @@ export default function Index() {
         <Improve/>
         <section className='brands'>
           {['edx', 'udemy', 'coursera'].map(item=>{
-            return <img className="brand-logo" src={`/images/${item}-logo.svg`} alt={`${item}-logo`} />
+            return <img key={item} className="brand-logo" src={`/images/${item}-logo.svg`} alt={`${item}-logo`} />
           })}
         </section>
         <Features/>

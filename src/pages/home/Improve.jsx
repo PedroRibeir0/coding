@@ -9,7 +9,7 @@ export default function Improve() {
             <p>
             Create, launch, and iterate on new marketing campaigns without distracting your product team.
             </p>
-            <MainButton text={'get ready'} height={'56px'}/>
+            <MainButton text={'get ready'} className={'improve-button'}/>
         </div>
         <div className='second-frame'>
             <img className="italo-photo" src="/images/italo-melo-photo.svg" alt="a man photo" />

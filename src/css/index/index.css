@@ -420,7 +420,7 @@ header.shadow {
 }
 @media screen and (min-width: 1024px) {
   .features .feature-text-area {
-    width: 50%;
+    width: 60%;
   }
 }
 .features .feature-text-area h2 {
@@ -430,6 +430,12 @@ header.shadow {
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
+@media screen and (min-width: 1024px) {
+  .features .feature-text-area h2 {
+    font-weight: 700;
+    font-size: 45px;
+  }
+}
 .features .feature-text-area p {
   width: 60%;
   text-align: center;
@@ -437,6 +443,12 @@ header.shadow {
   font-weight: 200;
   color: #010101;
   font-family: "Inter", sans-serif;
+}
+@media screen and (min-width: 1024px) {
+  .features .feature-text-area p {
+    font-size: 21px;
+    width: 80%;
+  }
 }
 .features .features-carrousel {
   display: flex;
@@ -515,11 +527,7 @@ header.shadow {
   width: 51px;
   height: 11px;
   background-color: #cecece;
-}
-@media screen and (min-width: 1024px) {
-  .features .carrousel-bar .bars-list .bar {
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
 .features .carrousel-bar .bars-list .bar.current {
   width: 82px;
@@ -536,6 +544,13 @@ header.shadow {
   padding: 20px;
   gap: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .web-pages {
+    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+}
 .web-pages .texts {
   display: flex;
   justify-content: center;
@@ -544,22 +559,65 @@ header.shadow {
   width: 100%;
   gap: 25px;
 }
+@media screen and (min-width: 1024px) {
+  .web-pages .texts {
+    width: 50%;
+    order: 2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .web-pages .texts {
+    align-items: flex-start;
+    flex-basis: 40%;
+    gap: 35px;
+  }
+}
 .web-pages .texts h3 {
+  text-align: center;
   font-size: 34px;
   font-weight: 500;
   color: #010101;
   font-family: "Montserrat", sans-serif;
+}
+@media screen and (min-width: 1024px) {
+  .web-pages .texts h3 {
+    text-align: left;
+    font-size: 45px;
+    font-weight: 700;
+  }
 }
 .web-pages .texts p {
   font-size: 16px;
   font-weight: 300;
   color: #010101;
   font-family: "Inter", sans-serif;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .web-pages .texts p {
     width: 60%;
-    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .web-pages .texts p {
+    font-size: 21px;
+    text-align: left;
+    width: 80%;
+  }
+}
+.web-pages .texts .main-button.web-pages-button {
+  width: 100%;
+  height: 50px;
+}
+@media screen and (min-width: 768px) {
+  .web-pages .texts .main-button.web-pages-button {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .web-pages .texts .main-button.web-pages-button {
+    width: 50%;
+    height: 60px;
   }
 }
 .web-pages .images {
@@ -568,8 +626,20 @@ header.shadow {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 1024px) {
+  .web-pages .images {
+    order: 1;
+    width: 50%;
+    flex-basis: 60%;
+  }
+}
 .web-pages .images .code-editor {
   width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .web-pages .images .code-editor {
+    width: 85%;
+  }
 }
 .web-pages .images .caution-park-icon {
   position: absolute;
@@ -584,6 +654,14 @@ header.shadow {
     bottom: 0px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .web-pages .images .caution-park-icon {
+    width: 200px;
+    bottom: 50%;
+    transform: translateY(50%) rotate(30deg);
+    right: 20px;
+  }
+}
 
 .get-up {
   display: flex;
@@ -594,12 +672,28 @@ header.shadow {
   gap: 30px;
   margin-bottom: 150px;
 }
+@media screen and (min-width: 1024px) {
+  .get-up {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 600px;
+    margin-bottom: 50px;
+  }
+}
 .get-up .texts {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 60px;
+}
+@media screen and (min-width: 1024px) {
+  .get-up .texts {
+    width: 50%;
+    height: 100%;
+    align-items: flex-end;
+  }
 }
 .get-up .texts h3 {
   text-align: center;
@@ -608,6 +702,12 @@ header.shadow {
   color: #010101;
   font-family: "Montserrat", sans-serif;
 }
+@media screen and (min-width: 1024px) {
+  .get-up .texts h3 {
+    font-size: 45px;
+    font-weight: 700;
+  }
+}
 .get-up .texts .showcase-university {
   list-style: none;
   display: flex;
@@ -615,6 +715,12 @@ header.shadow {
   justify-content: center;
   align-items: center;
   gap: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .get-up .texts .showcase-university {
+    flex-direction: row;
+    gap: 0;
+  }
 }
 .get-up .texts .showcase-university li {
   display: flex;
@@ -646,6 +752,12 @@ header.shadow {
 .get-up .texts .showcase-university .university {
   border-bottom: 1px solid #d5d5d5;
 }
+@media screen and (min-width: 1024px) {
+  .get-up .texts .showcase-university .university {
+    border: none;
+    border-right: 1px solid #d5d5d5;
+  }
+}
 .get-up .card-container {
   background-color: #010101;
   width: 100%;
@@ -656,6 +768,12 @@ header.shadow {
 @media screen and (min-width: 768px) {
   .get-up .card-container {
     width: 65%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .get-up .card-container {
+    width: 30%;
+    height: 380px;
   }
 }
 .get-up .card-container .card {
@@ -671,6 +789,11 @@ header.shadow {
   overflow: hidden;
   gap: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .get-up .card-container .card {
+    height: 450px;
+  }
+}
 .get-up .card-container .card .tutor {
   font-size: 23px;
   font-weight: 700;
@@ -678,6 +801,11 @@ header.shadow {
   font-family: "Montserrat", sans-serif;
   opacity: 0.3;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1024px) {
+  .get-up .card-container .card .tutor {
+    font-size: 28px;
+  }
 }
 .get-up .card-container .card .tutor-name {
   font-size: 32px;
@@ -688,11 +816,21 @@ header.shadow {
   text-transform: capitalize;
   width: 50%;
 }
+@media screen and (min-width: 1024px) {
+  .get-up .card-container .card .tutor-name {
+    font-size: 43px;
+  }
+}
 .get-up .card-container .card img {
   width: 250px;
   position: absolute;
   bottom: 0;
   right: 0;
+}
+@media screen and (min-width: 1024px) {
+  .get-up .card-container .card img {
+    width: 280px;
+  }
 }
 
 .packages {
@@ -710,6 +848,11 @@ header.shadow {
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
+@media screen and (min-width: 1024px) {
+  .packages h3 {
+    font-size: 45px;
+  }
+}
 .packages p {
   font-size: 16px;
   font-weight: 400;
@@ -717,6 +860,11 @@ header.shadow {
   font-family: "Inter", sans-serif;
   text-align: center;
   width: 80%;
+}
+@media screen and (min-width: 1024px) {
+  .packages p {
+    font-size: 21px;
+  }
 }
 .packages .new {
   position: absolute;
@@ -731,6 +879,11 @@ header.shadow {
   align-items: center;
   gap: 20px;
   list-style: none;
+}
+@media screen and (min-width: 1024px) {
+  .packages .packages-list {
+    flex-direction: row;
+  }
 }
 .packages .packages-list .package-container {
   position: relative;
@@ -749,6 +902,11 @@ header.shadow {
 .packages .packages-list .package-container:nth-child(2) {
   background-color: #010101;
   color: #ffffff;
+}
+@media screen and (min-width: 1024px) {
+  .packages .packages-list .package-container:nth-child(2) .packages-benefits {
+    height: 180px;
+  }
 }
 .packages .packages-list .package-container .package-name {
   font-size: 21px;
@@ -787,11 +945,21 @@ header.shadow {
   align-items: center;
   gap: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .faq {
+    margin-top: 120px;
+  }
+}
 .faq h3 {
   font-size: 34px;
   font-weight: 700;
   color: #010101;
   font-family: "Montserrat", sans-serif;
+}
+@media screen and (min-width: 1024px) {
+  .faq h3 {
+    font-size: 45px;
+  }
 }
 .faq .faq-list {
   width: 100%;
@@ -799,6 +967,11 @@ header.shadow {
   flex-direction: column;
   padding: 20px;
   background-color: #ffffff;
+}
+@media screen and (min-width: 1024px) {
+  .faq .faq-list {
+    padding: 50px;
+  }
 }
 .faq .faq-list .faq-item {
   display: flex;
@@ -824,7 +997,15 @@ header.shadow {
   background-color: white;
 }
 .faq .faq-list .faq-item .question-button .question {
+  cursor: pointer;
   flex-basis: 80%;
+}
+@media screen and (min-width: 1024px) {
+  .faq .faq-list .faq-item .question-button .question {
+    font-size: 24px;
+    font-weight: 700;
+    flex-basis: 60%;
+  }
 }
 .faq .faq-list .faq-item .question-button .faq-button {
   display: flex;
@@ -846,6 +1027,11 @@ header.shadow {
   display: none;
   animation: faqDown 0.2s;
   z-index: 0;
+}
+@media screen and (min-width: 1024px) {
+  .faq .faq-list .faq-item .answer {
+    width: 65%;
+  }
 }
 .faq .faq-list .faq-item.open .faq-button {
   background-color: #ffffff;

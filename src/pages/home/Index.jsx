@@ -16,8 +16,6 @@ export default function Index() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false);  
 
-  console.log(isMobile)
-
   useEffect(() => {
     function handleResize(){
       setIsMenuOpen(window.innerWidth >= 1024);

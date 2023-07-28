@@ -45,7 +45,7 @@ export default function FAQ() {
                 return(
                     <li key={item.q_number} className={`faq-item ${item.q_number == faqOpen ? 'open' : ''}`} id={item.q_number}>
                         <div className="question-button">
-                            <span className="question">{item.question}</span>
+                            <span className="question" onClick={openFaq}>{item.question}</span>
                             <button 
                             className="faq-button"
                             onClick={openFaq}>

@@ -9,12 +9,20 @@
     h3{
         @include font(34px, 700, $black, $montserrat);
         text-align: center;
+
+        @media screen and (min-width: 1024px){
+            font-size: 45px;
+        }
     }
 
     p{
         @include font(16px, 400, $black, $inter);
         text-align: center;
         width: 80%;
+
+        @media screen and (min-width: 1024px){
+            font-size: 21px;
+        }
     }
 
     .new{
@@ -31,6 +39,10 @@
         align-items: center;
         gap: 20px;
         list-style: none;
+
+        @media screen and (min-width: 1024px){
+            flex-direction: row;
+        }
 
         .package-container{
             position: relative;
@@ -49,6 +61,11 @@
             &:nth-child(2){
                 background-color: $black;
                 color: $white;
+                @media screen and (min-width: 1024px){
+                    .packages-benefits{
+                        height: 180px;
+                    }
+                }   
             }
 
             .package-name{

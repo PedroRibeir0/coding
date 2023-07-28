@@ -8,7 +8,7 @@ export default function WebPages() {
             <p>
             Go live on a fast, reliable, and hassle-free hosting network that scales with your business with one click and go code!
             </p>
-            <MainButton text={'try it yourself'} width={'100%'}/>
+            <MainButton  text={'try-yourself'} className={'web-pages-button'}/>
         </div>
         <div className="images">
             <img className="code-editor" src="/images/code-editor-2.svg" alt="code-editor" />

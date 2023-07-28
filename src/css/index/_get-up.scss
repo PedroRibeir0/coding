@@ -6,6 +6,14 @@
     padding: 20px;
     gap: 30px;
     margin-bottom: 150px;
+
+    @media screen and (min-width: 1024px){
+        flex-direction: row;   
+        justify-content: space-between; 
+        align-items: flex-start;
+        height: 600px;
+        margin-bottom: 50px;
+    }
     
 
     .texts{
@@ -14,10 +22,20 @@
         justify-content: center;
         align-items: center;
         gap: 60px;
+
+        @media screen and (min-width: 1024px){
+            width: 50%;
+            height: 100%;
+            align-items: flex-end;
+        }
         
         h3{
             text-align: center;
             @include font(34px, 500, $black, $montserrat);
+            @media screen and (min-width: 1024px){
+                font-size: 45px;
+                font-weight: 700;
+            }
             
         }
 
@@ -29,6 +47,11 @@
             align-items: center;
             gap: 40px;
 
+            @media screen and (min-width: 1024px){
+                flex-direction: row;
+                gap: 0;
+            }
+
             li{
                 display: flex;
                 flex-direction: column;
@@ -38,6 +61,9 @@
                 text-align: center;
                 padding-bottom: 40px;
                 gap: 20px;
+                @media screen and (min-width: 1024px){
+                    
+                }
 
                 h4{
                     @include font(34px, 700, $black, $montserrat);
@@ -54,6 +80,10 @@
 
             .university{
                 border-bottom: 1px solid darken($color: $gray, $amount: 12);
+                @media screen and (min-width: 1024px){
+                    border: none;
+                    border-right: 1px solid darken($color: $gray, $amount: 12);
+                }
             }
         }
     }
@@ -66,6 +96,11 @@
         height: 322px;
         @media screen and (min-width: 768px){
             width: 65%;
+        }
+
+        @media screen and (min-width: 1024px){
+            width: 30%;
+            height: 380px;
         }
         
 
@@ -82,10 +117,17 @@
             overflow: hidden;
             gap: 20px;
 
+            @media screen and (min-width: 1024px){
+                height: 450px;
+            }
+
             .tutor{
                 @include font(23px, 700, $black, $montserrat);
                 opacity: 0.3;
                 text-transform: uppercase;
+                @media screen and (min-width: 1024px){
+                    font-size: 28px;
+                }
             }
 
             .tutor-name{
@@ -93,6 +135,10 @@
                 opacity: 0.3;
                 text-transform: capitalize;
                 width: 50%;
+
+                @media screen and (min-width: 1024px){
+                    font-size: 43px;
+                }
             }
 
             img{
@@ -100,6 +146,9 @@
                 position: absolute;
                 bottom: 0;
                 right: 0;
+                @media screen and (min-width: 1024px){
+                    width: 280px;
+                }
             }
 
         }

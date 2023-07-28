@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom"
 import { useState, useRef, useEffect } from "react"
-import { motion } from 'framer-motion'
 
 export default function Features({isMobile}) {
 
@@ -22,29 +20,33 @@ export default function Features({isMobile}) {
         },
     ]
 
-    const [current, setCurrent] = useState(1)
+    const [current, setCurrent] = useState(0)
     const [width, setWidth] = useState(0)
     const carrousel = useRef()
-    const barChange = 70
+    const intervalTime = 3000
+
     
     useEffect(()=>{
         setWidth(carrousel.current.scrollWidth/ FeaturesList.length)
     },[])
     
-    function handleDrag(e){
-        let move = Math.trunc(Number(carrousel.current.style.transform.slice(11,17)))
-        if (move >= 280) setCurrent(0)
-        else if (move < 50 && move >= -20) setCurrent(1)
-        else if (move < -250) setCurrent(2)      
-    }    
+    useEffect(()=>{
+        function handleInterval(){
+            if (current >= FeaturesList.length-1){
+                setCurrent(0)
+                return
+            }
+            setCurrent(current+1)
+        }
+        const carrouselInterval =  setInterval(handleInterval, intervalTime)
+
+        return ()=>{
+            clearInterval(carrouselInterval)
+        }
+    }, [current])
 
     function changeSelectedBar(e){
-        if (isMobile) return
-        let id = e.target.id
-        carrousel.current.style.transform = `translateX(${
-            id == 0 ? width : id == 1 ? 0 : -width
-        }px)`
-        setCurrent(id)
+        setCurrent(e.target.id)
     }
 
     return (
@@ -56,39 +58,35 @@ export default function Features({isMobile}) {
             </p>
             <div className="carrousel-bar">
             <ul className="bars-list">
-                {[0,1,2].map(item=>
+                {FeaturesList.map((item, index)=>
                 <li 
-                id={item}
+                id={index}
                 onClick={changeSelectedBar} 
-                key={item} 
-                className={`bar ${item == current ? 'current': ''}`}>
+                key={index} 
+                className={`bar ${index == current ? 'current': ''}`}>
                 </li>)}
             </ul>
         </div>
         </div>
-        <motion.div className="features-carrousel">
-            <motion.ul 
-            onDrag={handleDrag}
-            className="carrousel-container" 
-            whileTap={{cursor: isMobile ? 'grabbing' : 'normal'}}
-            whileHover={{cursor: isMobile ? 'grab' : 'normal'}}
-            drag={isMobile ? "x" : ''}
-            dragConstraints={{right: width, left: -width}}
-            dragElastic={0}
-            dragMomentum={false}
-            ref={carrousel}>
+        <div className="features-carrousel">
+            <ul 
+                style={{transform : `translateX(${
+                    current == 0 ? width : current == 1 ? 0 : -width
+                }px)`}}
+                className="carrousel-container" 
+                ref={carrousel}>
                 {FeaturesList.map((item, index)=>{
                     return(
-                        <motion.li className="feature-card" key={index}>
+                        <li className="feature-card" key={index}>
                             <img src={item.src} alt="" className="feature-icon"/>
                             <div className="card-txt">
                                 <h3>{item.tittle}</h3>
                                 <p>{item.paragraph}</p>
                             </div>
-                        </motion.li>
+                        </li>
                     )})}
-            </motion.ul>
-        </motion.div>
+            </ul>
+        </div>
     </section>
   )
 }

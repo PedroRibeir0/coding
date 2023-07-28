@@ -48,17 +48,17 @@
         overflow: hidden;
         max-width: 370px;
         @media screen and (min-width: 1024px){
-         width: 50%;       
+         width: 50%;   
         }
 
         .carrousel-container{
-            cursor: grab;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
             list-style: none;
             touch-action: none;
+            transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);  
 
             .feature-card{
                 background-color: $white;
@@ -104,9 +104,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @media screen and (min-width: 1024px){
-            position: absolute;       
-        }
 
         .bars-list{
             display: flex;
@@ -120,6 +117,10 @@
                 width: 51px;
                 height: 11px;
                 background-color: darken($color: $gray, $amount: 15);
+
+                @media screen and (min-width: 1024px){
+                    cursor: pointer;       
+                }
             }
 
             .bar.current{

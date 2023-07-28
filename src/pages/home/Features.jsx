@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { useState, useRef, useEffect } from "react"
 import { motion } from 'framer-motion'
 
-export default function Features() {
+export default function Features({isMobile}) {
 
     const FeaturesList = [
         {
@@ -26,20 +26,26 @@ export default function Features() {
     const [width, setWidth] = useState(0)
     const carrousel = useRef()
     const barChange = 70
-
+    
     useEffect(()=>{
         setWidth(carrousel.current.scrollWidth/ FeaturesList.length)
     },[])
-
-
+    
     function handleDrag(e){
         let move = Math.trunc(Number(carrousel.current.style.transform.slice(11,17)))
-        console.log(move)
         if (move >= 280) setCurrent(0)
         else if (move < 50 && move >= -20) setCurrent(1)
-        else if (move < -250) setCurrent(2)
-        
+        else if (move < -250) setCurrent(2)      
     }    
+
+    function changeSelectedBar(e){
+        if (isMobile) return
+        let id = e.target.id
+        carrousel.current.style.transform = `translateX(${
+            id == 0 ? width : id == 1 ? 0 : -width
+        }px)`
+        setCurrent(id)
+    }
 
     return (
     <section className="features">
@@ -48,13 +54,25 @@ export default function Features() {
             <p>
                 We provide various special features for all of you
             </p>
+            <div className="carrousel-bar">
+            <ul className="bars-list">
+                {[0,1,2].map(item=>
+                <li 
+                id={item}
+                onClick={changeSelectedBar} 
+                key={item} 
+                className={`bar ${item == current ? 'current': ''}`}>
+                </li>)}
+            </ul>
+        </div>
         </div>
         <motion.div className="features-carrousel">
             <motion.ul 
             onDrag={handleDrag}
             className="carrousel-container" 
-            whileTap={{cursor: 'grabbing'}}
-            drag="x"
+            whileTap={{cursor: isMobile ? 'grabbing' : 'normal'}}
+            whileHover={{cursor: isMobile ? 'grab' : 'normal'}}
+            drag={isMobile ? "x" : ''}
             dragConstraints={{right: width, left: -width}}
             dragElastic={0}
             dragMomentum={false}
@@ -71,9 +89,6 @@ export default function Features() {
                     )})}
             </motion.ul>
         </motion.div>
-        <div className="carrousel-bar">
-            <ul className="bars-list">{[0,1,2].map(item=><li key={item} className={`bar ${item == current ? 'current': ''}`}></li>)}</ul>
-        </div>
     </section>
   )
 }

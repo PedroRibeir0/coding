@@ -451,13 +451,13 @@ header.shadow {
   }
 }
 .features .features-carrousel .carrousel-container {
-  cursor: grab;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   list-style: none;
   touch-action: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .features .features-carrousel .carrousel-container .feature-card {
   background-color: #ffffff;
@@ -503,11 +503,6 @@ header.shadow {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 1024px) {
-  .features .carrousel-bar {
-    position: absolute;
-  }
-}
 .features .carrousel-bar .bars-list {
   display: flex;
   list-style: none;
@@ -520,6 +515,11 @@ header.shadow {
   width: 51px;
   height: 11px;
   background-color: #cecece;
+}
+@media screen and (min-width: 1024px) {
+  .features .carrousel-bar .bars-list .bar {
+    cursor: pointer;
+  }
 }
 .features .carrousel-bar .bars-list .bar.current {
   width: 82px;

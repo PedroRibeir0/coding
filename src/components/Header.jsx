@@ -1,38 +1,6 @@
 import Logo from "./Logo";
-import { useState, useEffect } from "react";
 
-export default function Header() {
-
-  const [isMenuOpen, setIsMenuOpen] = useState(true)
-  const [scrolled, setScrolled] = useState(false);
-
-
-  useEffect(() => {
-    function handleScroll(){
-      setScrolled(window.scrollY > 0);
-    }
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isMenuOpen) return;
-  
-    function handleClickOutsideMenu(e){
-      let noMenu = window.innerWidth / 100 * 50;
-      if (e.clientX <= noMenu) setIsMenuOpen(false);
-    };
-  
-    window.addEventListener('click', handleClickOutsideMenu);
-  
-    return () => {
-      window.removeEventListener('click', handleClickOutsideMenu);
-    };
-  }, [isMenuOpen]);
+export default function Header({isMenuOpen, handleMenuClick, scrolled}) {
 
   function Menu(){
     return(
@@ -58,7 +26,7 @@ export default function Header() {
           src="/images/menu-icon.svg" 
           alt="menu-icon"
           className="menu-icon"
-          onClick={()=> setIsMenuOpen(true)}
+          onClick={handleMenuClick}
         />
     </header>
     {isMenuOpen && <Menu/>}

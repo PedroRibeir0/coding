@@ -85,7 +85,7 @@ export default function Index() {
             <p>Build your site for free and take as long as you need</p>
             <div className="buttons">
               <button className='try-yourself-button'>try yourself</button>
-              <MainButton text={'get started'} width={'100%'} height={'40px'}/>
+              <MainButton text={'get started'} className={'start-button'}/>
             </div>
           </div>
         </div>

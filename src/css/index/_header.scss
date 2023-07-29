@@ -14,6 +14,7 @@ header{
      position: absolute;   
      background-color: transparent;
      width: 50%;
+     padding: 0 40px;
     }
 
     .menu-icon{
@@ -67,8 +68,12 @@ header{
         }
         
         .menu-opt{
+            cursor: pointer;
             &:hover{
                 color: lighten($color: $black, $amount: 50);
+                @media screen and (min-width: 1024px){
+                    color: $yellow;
+                }
             }
         }
     }

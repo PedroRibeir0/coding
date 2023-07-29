@@ -105,6 +105,7 @@ header {
     position: absolute;
     background-color: transparent;
     width: 50%;
+    padding: 0 40px;
   }
 }
 header .menu-icon {
@@ -164,8 +165,16 @@ header .menu-icon {
     justify-content: flex-end;
   }
 }
+.menu .menu-container .menu-opt {
+  cursor: pointer;
+}
 .menu .menu-container .menu-opt:hover {
   color: #818181;
+}
+@media screen and (min-width: 1024px) {
+  .menu .menu-container .menu-opt:hover {
+    color: #DDF247;
+  }
 }
 
 header.shadow {
@@ -205,6 +214,7 @@ header.shadow {
 @media screen and (min-width: 1024px) {
   .improve .first-frame {
     width: 50%;
+    padding-left: 40px;
   }
 }
 .improve .first-frame h1 {
@@ -1066,6 +1076,11 @@ footer {
     padding: 20px 40px;
   }
 }
+@media screen and (min-width: 1024px) {
+  footer {
+    gap: 0;
+  }
+}
 footer .layer-1 {
   display: flex;
   flex-direction: column;
@@ -1076,6 +1091,13 @@ footer .layer-1 {
   footer .layer-1 {
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer .layer-1 {
+    border-bottom: 1px solid #F4F4F4;
   }
 }
 footer .layer-1 .footer-menu {
@@ -1093,6 +1115,15 @@ footer .layer-1 .footer-menu {
   footer .layer-1 .footer-menu {
     flex-direction: row;
   }
+}
+@media screen and (min-width: 1024px) {
+  footer .layer-1 .footer-menu {
+    gap: 60px;
+  }
+}
+footer .layer-1 .footer-menu li:hover {
+  cursor: pointer;
+  color: #DDF247;
 }
 footer .layer-2 {
   display: flex;
@@ -1121,6 +1152,12 @@ footer .layer-2 .social-links {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 1024px) {
+  footer .layer-2 .social-links {
+    justify-content: flex-start;
+    gap: 30px;
+  }
+}
 footer .layer-2 .macode-copyright {
   font-size: 20px;
   font-weight: 300;
@@ -1129,6 +1166,25 @@ footer .layer-2 .macode-copyright {
 }
 footer .layer-2 .macode-copyright .macode {
   color: #DDF247;
+}
+
+html::-webkit-scrollbar {
+  width: 12px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #DDF247;
+  border-radius: 10px;
+}
+
+.home {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .brands {
@@ -1162,12 +1218,24 @@ footer .layer-2 .macode-copyright .macode {
   gap: 30px;
   padding: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .start-container .start {
+    width: 60%;
+    padding: 40px;
+    gap: 40px;
+  }
+}
 .start-container .start h3 {
   text-align: center;
   font-size: 23px;
   font-weight: 800;
   color: #010101;
   font-family: "Source Code Pro", monospace;
+}
+@media screen and (min-width: 1024px) {
+  .start-container .start h3 {
+    font-size: 48px;
+  }
 }
 .start-container .start p {
   text-align: center;
@@ -1176,6 +1244,11 @@ footer .layer-2 .macode-copyright .macode {
   color: #010101;
   font-family: "Montserrat", sans-serif;
 }
+@media screen and (min-width: 1024px) {
+  .start-container .start p {
+    font-size: 26px;
+  }
+}
 .start-container .start .buttons {
   width: 100%;
   display: flex;
@@ -1183,6 +1256,11 @@ footer .layer-2 .macode-copyright .macode {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .start-container .start .buttons {
+    flex-direction: row;
+  }
 }
 .start-container .start .buttons .try-yourself-button {
   width: 100%;
@@ -1196,6 +1274,25 @@ footer .layer-2 .macode-copyright .macode {
   font-weight: 500;
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
+}
+@media screen and (min-width: 1024px) {
+  .start-container .start .buttons .try-yourself-button {
+    width: 30%;
+    height: 55px;
+  }
+}
+.start-container .start .buttons .try-yourself-button:active {
+  transform: scale(0.985);
+}
+.start-container .start .buttons .main-button.start-button {
+  width: 100%;
+  height: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .start-container .start .buttons .main-button.start-button {
+    width: 30%;
+    height: 55px;
+  }
 }
 
 .main-button {

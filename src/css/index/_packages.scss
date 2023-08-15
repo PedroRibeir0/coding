@@ -6,15 +6,6 @@
     align-items: center;
     justify-content: center;
 
-    h3{
-        @include font(34px, 700, $black, $montserrat);
-        text-align: center;
-
-        @media screen and (min-width: 1024px){
-            font-size: 45px;
-        }
-    }
-
     p{
         @include font(16px, 400, $black, $inter);
         text-align: center;

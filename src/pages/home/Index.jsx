@@ -34,7 +34,7 @@ export default function Index() {
   }
 
   useEffect(() => {
-    if (!isMenuOpen) return;
+    if ((!isMobile) || (!isMenuOpen)) return
   
     function handleClickOutsideMenu(e){
       let noMenu = window.innerWidth / 100 * 50;
@@ -51,7 +51,11 @@ export default function Index() {
 
   useEffect(() => {
     function handleScroll() {
-      if (isMobile) setScrolled(window.scrollY > 0);
+      if (isMobile) {
+        setScrolled(window.scrollY > 0)
+        return
+      };
+      setScrolled(false)
     }
   
     window.addEventListener('scroll', handleScroll);

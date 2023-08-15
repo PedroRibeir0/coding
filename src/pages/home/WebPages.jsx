@@ -4,7 +4,7 @@ export default function WebPages() {
   return (
     <section className="web-pages">
         <div className="texts">
-            <h3>The language for building web pages</h3>
+            <h2 className="main-header">The language for building web pages</h2>
             <p>
             Go live on a fast, reliable, and hassle-free hosting network that scales with your business with one click and go code!
             </p>

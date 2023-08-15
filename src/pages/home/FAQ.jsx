@@ -39,7 +39,7 @@ export default function FAQ() {
 
     return (
     <section className="faq">
-        <h3>FAQs</h3>
+        <h2 className="main-header">FAQs</h2>
         <ul className="faq-list">
             {faqInfo.map(item=>{
                 return(

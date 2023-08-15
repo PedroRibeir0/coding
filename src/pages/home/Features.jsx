@@ -52,7 +52,7 @@ export default function Features({isMobile}) {
     return (
     <section className="features">
         <div className="feature-text-area">
-            <h2>Our Features Special for your</h2>
+            <h2 className="main-header">Our Features Special for your</h2>
             <p>
                 We provide various special features for all of you
             </p>

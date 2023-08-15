@@ -28,15 +28,6 @@
         @media screen and (min-width: 1024px){
             width: 60%;
         }
-
-        h2{
-            @include font(34px, 500, $black, $montserrat);
-            text-align: center;
-            @media screen and (min-width: 1024px){
-                font-weight: 700;
-                font-size: 45px;
-            }
-        }
         
         p{
             width: 60%;

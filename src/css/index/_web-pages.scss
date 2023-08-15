@@ -34,12 +34,8 @@
 
         h3{
             text-align: center;
-            @include font(34px, 500, $black, $montserrat);
-
             @media screen and (min-width: 1024px){
                 text-align: left;
-                font-size: 45px;
-                font-weight: 700;
             }
         }
 

@@ -58,6 +58,14 @@ html::-webkit-scrollbar-thumb {
   position: relative;
 }
 
+.main-header{
+  @include font(34px, 700, $black, $montserrat);
+  @media screen and (min-width: 1024px){
+    font-size: 45px;
+    font-weight: 700;
+  }   
+}
+
 .brands{
   background-color: $white;
   width: 100%;

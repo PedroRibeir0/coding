@@ -3,7 +3,7 @@ export default function GetUp() {
   return (
     <section className="get-up">
         <div className="texts">
-            <h3>Get up and running fast together</h3>
+            <h2 className="main-header">Get up and running fast together</h2>
             <ul className="showcase-university">
                 <li className="university">
                     <img src="/images/university-icon.svg" alt="" />

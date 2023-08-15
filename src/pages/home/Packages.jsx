@@ -36,7 +36,7 @@ export default function Packages() {
 
     return (
     <section className="packages">
-        <h3>Choose your package</h3>
+        <h2 className="main-header">Choose your package</h2>
         <p>
         We provide various types of packages just for you
         </p>
